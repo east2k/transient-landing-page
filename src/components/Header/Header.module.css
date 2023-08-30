@@ -4,6 +4,9 @@
     flex-direction: row;
     background-color: transparent;
     padding: 25px;
+    position: absolute;
+    right: 0;left: 0;
+    top: 0;
 }
 
 .header_logo {
@@ -27,7 +30,7 @@
     text-transform: uppercase;
     margin-left: 15px;
 }
-.navbar_link.active a {
+.navbar_link a.active {
     color: var(--primary-color);
     text-decoration: underline;
 }

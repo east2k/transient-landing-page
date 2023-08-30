@@ -1,0 +1,132 @@
+.section_content {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+}
+
+.section_label {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.label_header {
+    font-size: var(--semilarge-font-size);
+    font-weight: var(--medium-font-weight);
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+.more_info {
+    margin-top: auto;
+}
+
+.more_info.contact {
+    width: 100%;
+    margin-left: auto;
+}
+
+.more_info_button {
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: var(--medium-font-weight);
+}
+
+.more_info_button.contact {
+    color: #fff;
+}
+
+.more_info_button svg {
+    color: var(--secondary-color);
+    font-size: 24px;
+}
+
+.questions_container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 25px;
+}
+
+.questions_container div:last-of-type {
+    border-bottom: none;
+}
+
+.question_item {
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid #0000003a;
+    padding: 15px 0;
+}
+
+.question_item.active_question {
+}
+
+.question_item.active_question .question_name {
+    color: var(--secondary-color);
+}
+
+.question_name {
+    font-size: var(--bigger-font-size);
+    font-weight: var(--medium-font-weight);
+    text-transform: uppercase;
+}
+
+.question_answer {
+    position: relative;
+    cursor: pointer;
+    top: -15px;
+    font-size: var(--regular-font-size);
+    opacity: 0;
+    height: 0;
+    transition: 250ms;
+}
+
+.question_item.active_question .question_answer {
+    top: 0px;
+    opacity: 1;
+    height: auto;
+}
+
+.contact_info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    color: var(--white-color);
+    background-color: var(--black-background-color);
+    padding: 25px;
+    height: auto;
+}
+
+.contact_header_label {
+    font-size: var(--semilarge-font-size);
+    font-weight: var(--medium-font-weight);
+    text-transform: uppercase;
+}
+
+.contact_list_container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_item_name {
+    font-weight: var(--medium-font-weight);
+}
+
+.location_image_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    min-width: 500px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.location_image_container img {
+    width: 100%;
+    height: auto;
+}

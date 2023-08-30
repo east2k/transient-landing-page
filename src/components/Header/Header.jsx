@@ -1,27 +1,47 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 
 export const Header = () => {
+    const linkList = [
+        {
+            linkPath: "/",
+            linkName: "Home",
+        },
+        {
+            linkPath: "/about-us",
+            linkName: "About Us",
+        },
+        {
+            linkPath: "/rooms",
+            linkName: "Rooms",
+        },
+        {
+            linkPath: "/type",
+            linkName: "Questions",
+        },
+        {
+            linkPath: "/contact-us",
+            linkName: "Contact Us",
+        },
+    ];
+
+    const newLinkList = linkList.map((item, index) => {
+        return (
+            <li key={index} className={styles.navbar_link}>
+                <NavLink
+                    className={({ isActive }) => (isActive ? styles.active : "")}
+                    to={item.linkPath}
+                >
+                    {item.linkName}
+                </NavLink>
+            </li>
+        );
+    });
+
     return (
-        <div className={styles.Header}>
+        <header className={styles.Header}>
             <h1 className={styles.header_logo}>Logo</h1>
-            <ul className={styles.navbar}>
-                <li className={styles.navbar_link + " " + styles.active}>
-                    <Link to="/">Home</Link>
-                </li>
-                <li className={styles.navbar_link}>
-                    <Link to="/about-us">About Us</Link>
-                </li>
-                <li className={styles.navbar_link}>
-                    <Link to="/project">Project</Link>
-                </li>
-                <li className={styles.navbar_link}>
-                    <Link to="/type">Type</Link>
-                </li>
-                <li className={styles.navbar_link}>
-                    <Link to="/contact-us">Contact Us</Link>
-                </li>
-            </ul>
-        </div>
+            <ul className={styles.navbar}>{newLinkList}</ul>
+        </header>
     );
 };

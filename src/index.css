@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@700&family=Kanit:wght@400;500;600;700&display=swap");
+
+:root {
+    --regular-font-size: 12px;
+    --semi-medium-font-size: 14px;
+    --medium-font-size: 18px;
+    --big-font-size: 24px;
+    --bigger-font-size: 28px;
+    --biggest-font-size: 32px;
+    --semilarge-font-size: 50px;
+    --large-font-size: 64px;
+    --larger-font-size: 74px;
+
+    --regular-font-weight: 400;
+    --medium-font-weight: 500;
+    --semibold-font-weight: 600;
+    --bold-font-weight: 700;
+
+    --primary-color: #151515;
+    --secondary-color: #2137ff;
+
+    --lighter-primary-color: #15151586;
+
+    --white-color: #fff;
+
+    --dark-color: #070707;
+    --gray-color: #262626;
+
+    --white-background-color: #efefef;
+    --black-background-color: #151515;
+
+    --primary-font-family: "Kanit", sans-serif;
+    --secondary-font-family: "Encode Sans Expanded", sans-serif;
+}
+
+* {
+    font-family: var(--primary-font-family);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white-background-color);
+}
